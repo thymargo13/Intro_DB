@@ -1,12 +1,15 @@
 import DataBase.*;
 import java.io.IOException;
 import java.sql.SQLException;
+import Command.*;
 
 public class BBCracker   {
 
 	public static void main(String[] args) throws SQLException, IOException {
 		// TODO Auto-generated method stub
 		Databases db = new Databases();
+		Command cmd;
+		String [] commdClass ={"CrackerReport","JokeReport","InsertCracker"};
 		db.CreateGift();
 		db.CreateHat();
 		db.CreateJoke();
@@ -19,5 +22,6 @@ public class BBCracker   {
         System.out.println("[3]--- Insert New Craker");
         System.out.println("[0]--- Exit System");
 	}
+	
 
 }
