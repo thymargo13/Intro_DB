@@ -57,7 +57,7 @@ public class InsertCracker extends CrackerCommand {
 	}catch(SQLException ex){
 	//System.out.println(ex.getSQLState());
 		if(ex.getSQLState().equals("23505")){
-			System.out.println(cid +"alredy exists!");
+			System.out.println(cid +" alredy exists!");
 		}
 		if(ex.getSQLState().equals("23503")){
 			System.out.println("Please the hid, gid or jid, which does Not exist!");

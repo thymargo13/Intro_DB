@@ -14,7 +14,7 @@ public class BBCracker   {
 		CrackerCommand cmd;
 		String [] commdClass ={"CrackerReport","JokeReport","InsertCracker"};
 		
-		//Process();
+		Process();
 		
 		while(true){
 			

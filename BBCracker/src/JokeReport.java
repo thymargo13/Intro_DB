@@ -20,7 +20,7 @@ public class JokeReport extends CrackerCommand{
 	        System.out.println("Joke: " + joke);
 	        System.out.println("Royalty: £" + royalty);
 	        System.out.println("Total Used: " + times);
-	        System.out.println("Total Royalty Payment: £" + (times*royalty));
+	        System.out.println("Total Royalty Payment: £" + String.format( "%.2f",(times*royalty)));
 	        System.out.println("---Joke Report End---");
 	        System.out.println();
 	        }else{
