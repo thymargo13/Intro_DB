@@ -1,9 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package DataBase;
+
+
 
 import java.io.IOException;
 import java.sql.*;
@@ -199,7 +195,7 @@ public class Databases {
         JSONParser parser = new JSONParser();
 
         try {
-            Object obj = parser.parse(new FileReader("src/Database/RawData.json"));
+            Object obj = parser.parse(new FileReader("src/RawData.json"));
             JSONObject jsonObject = (JSONObject) obj;
             JSONArray giftJson = (JSONArray) jsonObject.get("gift");
             JSONArray hatJson = (JSONArray) jsonObject.get("hat");
