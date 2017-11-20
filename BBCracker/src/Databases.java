@@ -195,7 +195,7 @@ public class Databases {
         JSONParser parser = new JSONParser();
 
         try {
-            Object obj = parser.parse(new FileReader("src/RawData.json"));
+            Object obj = parser.parse(new FileReader("BBCracker/src/RawData.json"));
             JSONObject jsonObject = (JSONObject) obj;
             JSONArray giftJson = (JSONArray) jsonObject.get("gift");
             JSONArray hatJson = (JSONArray) jsonObject.get("hat");
