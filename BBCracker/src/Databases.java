@@ -301,6 +301,8 @@ public class Databases {
                     throw new SQLException("Cannot insert records!");
                 }
             }
+            pStmt.close();
+            CloseConnection(connect);
         } catch (SQLException e) {
             e.printStackTrace();
         }
