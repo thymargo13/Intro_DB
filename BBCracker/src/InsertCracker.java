@@ -28,7 +28,9 @@ public class InsertCracker extends CrackerCommand {
 	        
 	        }catch(IOException ex){
 	        	System.out.println("Please Enter a valid Cracker ID!");
-	        }
+	        }catch(NumberFormatException ex){
+			System.out.println("Please Enter a valid Saleprice!");
+		}
 		
 	}
 	public void insertCracker(String id, String name, String hid, String gid, String jid){
