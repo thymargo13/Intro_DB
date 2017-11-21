@@ -1,0 +1,40 @@
+DROP TABLE IF EXISTS Hat CASCADE;
+DROP TABLE IF EXISTS Gift CASCADE;
+DROP TABLE IF EXISTS Joke CASCADE;
+DROP TABLE IF EXISTS Cracker CASCADE;
+
+CREATE TABLE Hat(
+   hid VARCHAR(10) NOT NULL,
+   description VARCHAR(100) NOT NULL,
+   price DECIMAL(4,2) NOT NULL,
+   CONSTRAINT hid_pk PRIMARY KEY(hid)
+   );
+   
+CREATE TABLE Gift( 
+	gid VARCHAR(10) NOT NULL, 
+	description VARCHAR(100) NOT NULL,
+   	price DECIMAL(4,2) NOT NULL,
+   	CONSTRAINT gid_pk PRIMARY KEY(gid)
+   	);
+   	
+CREATE TABLE Joke(
+   jid VARCHAR(10) NOT NULL,
+   joke VARCHAR(100) NOT NULL,
+   royalty DECIMAL(4,2) NOT NULL,
+   CONSTRAINT jid_pk PRIMARY KEY(jid)
+   );
+   
+CREATE TABLE Cracker(
+	cid VARCHAR(10) NOT NULL,           
+	name VARCHAR(100) NOT NULL,
+    jid VARCHAR(10) NULL,
+    gid VARCHAR(10) NULL,
+   	hid VARCHAR(10) NULL,
+    saleprice DECIMAL(4,2) NOT NULL,
+   	quantity INTEGER NOT NULL,
+   	CONSTRAINT cracker_joke_fk FOREIGN KEY(jid) REFERENCES Joke(jid),
+    CONSTRAINT cracker_gift_fk FOREIGN KEY(gid) REFERENCES Gift(gid),
+    CONSTRAINT cracker_hat_fk FOREIGN KEY(hid) REFERENCES Hat(hid),
+    CONSTRAINT cracker_pk PRIMARY KEY(cid)
+    );
+   
