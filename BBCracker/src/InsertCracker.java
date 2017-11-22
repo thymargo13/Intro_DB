@@ -28,6 +28,8 @@ public class InsertCracker extends CrackerCommand {
 	        
 	        }catch(IOException ex){
 	        	System.out.println("Please Enter a valid Cracker ID!");
+	        }catch(NumberFormatException ex) {
+	        	System.out.println("Please Enter Valid Number for saleprice!");
 	        }
 		
 	}
@@ -55,14 +57,7 @@ public class InsertCracker extends CrackerCommand {
 	            pStmt.close();
 	            db.CloseConnection(connect);
 	}catch(SQLException ex){
-	//System.out.println(ex.getSQLState());
-		if(ex.getSQLState().equals("23505")){
-			System.out.println(cid +" alredy exists!");
-		}
-		if(ex.getSQLState().equals("23503")){
-			System.out.println("Please the hid, gid or jid, which does Not exist!");
-		}
-	
+		System.out.println(ex.getMessage());
 		}catch(IOException ex){
 			System.out.println("Invalid Input");
 			}

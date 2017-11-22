@@ -10,10 +10,7 @@ import java.util.Scanner;
 public class CrackerReport extends CrackerCommand{
 	
 	private String customCid;
-//	private Databases db = new Databases();
-//	
-//	private Connection connect =null;
-//	private PreparedStatement pStmt =null;
+
 	
 	private String cid, gid,hid,jokeid, crackerName;
 	private double saleprice, royalty, giftprice, hatprice;
@@ -61,7 +58,7 @@ public class CrackerReport extends CrackerCommand{
 		        		SelectGift(gid);
 		        		SelectHat(hid);
 		        		SelectJoke(jokeid);
-		        	//	System.out.println(jokeid);
+		       
 	            	}
 		        
 	            	
@@ -100,7 +97,7 @@ public class CrackerReport extends CrackerCommand{
 	            	giftDesption = rs.getString("description");
 	            	giftprice = rs.getDouble("price");   
 	            	}
-		       // System.out.println(giftDesption+giftprice);
+		      
 		        pStmt.close();
 	            db.CloseConnection(connect);
 	        } catch(SQLException ex) {
