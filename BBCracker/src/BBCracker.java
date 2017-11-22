@@ -14,7 +14,7 @@ public class BBCracker {
 		InputStreamReader is = new InputStreamReader(System.in);
 		BufferedReader br = new BufferedReader(is);
 		CrackerCommand cmd;
-		String[] commdClass = { "ExitCommand", "CrackerReport", "JokeReport", "InsertCracker" };
+		String[] commdClass = { "ExitCommand", "CrackerReport", "JokeReport", "InsertCracker" ,"CreateTable"};
 
 		Process();
 		
@@ -25,6 +25,7 @@ public class BBCracker {
 			System.out.println("[1]--- View Craker Report");
 			System.out.println("[2]--- View Joke Report");
 			System.out.println("[3]--- Insert New Craker");
+			System.out.println("[4]--- Data Base Create/ Reset");
 			System.out.println("[0]--- Exit System");
 			System.out.println();
 			System.out.print("Select Function: ");
@@ -44,10 +45,7 @@ public class BBCracker {
 	}
 
 	public static void Process() throws SQLException, IOException {
-		// db.CreateGift();
-		// db.CreateHat();
-		// db.CreateJoke();
-		// db.CreateCracker();
+		
 		db.insertData();
 	}
 
